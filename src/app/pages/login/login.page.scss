@@ -1,0 +1,107 @@
+$red-lock: #ee4049;
+$yellow-lock: #fbe261;
+$grey-lock: #d2d3d5;
+$gradient: linear-gradient(0deg, $red-lock 0%, $yellow-lock 100%);
+$reverse-gradient: linear-gradient(0deg, $yellow-lock 0%, $red-lock 100%);
+* {
+  font-size: x-large;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: $gradient;
+  .splash,
+  form {
+    box-sizing: border-box;
+  }
+  .splash {
+    margin-top: 30px;
+    width: 15%;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    width: 99%;
+    background: $reverse-gradient;
+    border: solid 5px black;
+    margin: auto;
+
+    h1 {
+      height: 20%;
+      color: black;
+      text-align: center;
+    }
+    ion-item {
+      box-sizing: border-box;
+      margin: 1%;
+      border-radius: 2%;
+      color: $grey-lock;
+      height: 150px;
+    }
+    ion-button {
+      color: $grey-lock;
+    }
+
+    .form-content {
+      display: flex;
+      box-sizing: content-box;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+    #inputs {
+      width: 100%;
+    }
+    .btnLogin {
+      width: 98%;
+      margin: auto;
+    }
+    .register {
+      background-color: black;
+      width: 93%;
+      margin: 5% auto;
+      padding: 10px;
+      border-radius: 2%;
+    }
+
+    #users-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      // padding-left: 1%;
+      // padding-right: 1%;
+      width: 100%;
+      // border: solid 1px red;
+      ion-button {
+        width: 32%;
+      }
+    }
+
+    ion-radio-group {
+      display: flex;
+      flex-direction: row;
+      div {
+        // width: 90px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        margin: .5rem;
+        background-color: black;
+        border-radius: .5rem;
+        box-sizing: content-box;
+        ion-radio{
+            margin-top: 8px;
+            margin-right: 10px;
+            margin-left: .5rem;
+        }
+        p{}
+            
+      }
+    }
+  }
+}

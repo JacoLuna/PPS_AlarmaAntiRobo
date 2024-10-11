@@ -1,0 +1,11 @@
+{
+	"appId": "io.ionic.starter4",
+	"appName": "Alarma",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+		  "launchAutoHide": false
+		}
+	}
+}

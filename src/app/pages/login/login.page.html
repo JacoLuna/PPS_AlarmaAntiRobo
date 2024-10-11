@@ -1,0 +1,96 @@
+<ion-content [fullscreen]="true" class="content">
+  <div class="login-container">
+    <img
+      class="splash"
+      src="../../../assets/icon/candado-inicial.png"
+      alt="ImagenLogo"
+    />
+
+    <form>
+      <h1>Ingreso</h1>
+      <div id="inputs" class="form-content">
+        <div class="input">
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+            ></ion-input>
+            <ion-button slot="end" fill="clear" size="small"> </ion-button>
+          </ion-item>
+        </div>
+        <div class="input">
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input
+              type="input"
+              name="email"
+              [(ngModel)]="email"
+              required
+            ></ion-input>
+          </ion-item>
+        </div>
+      </div>
+
+      <ion-button
+        class="btnLogin form-content"
+        (click)="btnLogin()"
+        expand="block"
+        type="submit"
+        fill="fill"
+        color="dark"
+        id="btnLogin"
+        >Iniciar sesión</ion-button
+      >
+
+      <p class="register form-content">
+        ¿No tenés una cuenta?
+        <a class="register-link" routerLink="/register">Regístrate aquí</a>
+      </p>
+
+      <!-- <div id="users-buttons" class="form-content">
+        <ion-button
+          (click)="btnUser(1)"
+          expand="full"
+          type="submit"
+          fill="fill"
+          color="dark"
+          >Usuario 1</ion-button
+        >
+        <ion-button
+          (click)="btnUser(2)"
+          expand="full"
+          type="submit"
+          fill="fill"
+          color="dark"
+          >Usuario 2</ion-button
+        >
+        <ion-button
+          (click)="btnUser(3)"
+          expand="full"
+          type="submit"
+          fill="fill"
+          color="dark"
+          >Usuario 3</ion-button
+        >
+      </div> -->
+
+      <ion-radio-group (click)="btnUser($event)" [(ngModel)]="valor" [allowEmptySelection]="true" name="radio">
+        <div>
+          <ion-radio value="Jaco">Jaco</ion-radio>  
+          <p>Jaco</p>
+        </div>
+        <div>
+          <ion-radio value="Tomas">Tomás</ion-radio>  
+          <p>Tomás</p>
+        </div>
+        <div>
+          <ion-radio value="Carlos">Carlos</ion-radio>
+          <p>Carlos</p>
+        </div>
+      </ion-radio-group>
+    </form>
+  </div>
+</ion-content>
